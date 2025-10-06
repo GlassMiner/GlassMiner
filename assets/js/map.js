@@ -51,7 +51,7 @@ document.addEventListener("DOMContentLoaded", () => {
               ${server.command.map(cmd => `<span class="command-tag">${cmd}</span>`).join('')}
             </td>
             <td>
-              <input type="checkbox" ${server.automable ? 'checked' : ''} disabled>
+              <input type="checkbox" ${server.automatable ? 'checked' : ''} disabled>
             </td>
           </tr>
         `;

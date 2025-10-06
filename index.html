@@ -27,7 +27,7 @@ permalink: /
       <th>Country</th>
       <th>ASN</th>
       <th>Commands</th>
-      <th>Automable</th>
+      <th>Automatable</th>
     </tr>
   </thead>
   <tbody>
@@ -44,7 +44,7 @@ permalink: /
         {% endfor %}
       </td>
       <td>
-        <input type="checkbox" {% if server.automable %}checked{% endif %} disabled>
+        <input type="checkbox" {% if server.automatable %}checked{% endif %} disabled>
       </td>
     </tr>
     {% endfor %}
@@ -63,7 +63,7 @@ function applyFilters() {
     const commandMatch = commandSelected === "all" || commands.includes(commandSelected);
     
     // 获取自动化过滤条件
-    const isAutoStr = row.getAttribute("data-automable");
+    const isAutoStr = row.getAttribute("data-automatable");
     // 布尔值处理：检查是否等于字符串 "true" 或存在复选框并被选中
     const isAuto = isAutoStr === "true" || row.querySelector("input[type=checkbox]").checked;
     const autoMatch = autoSelected === "all" || 
